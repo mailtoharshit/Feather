@@ -1,0 +1,10 @@
+<apex:page showheader="false" sidebar="false" standardStylesheets="false">
+   <head>
+    <!-- Import CSS from Rawgit` -->
+    <link rel="stylesheet" href="//github.com/mailtoharshit/Anova/blob/master/css/material.min.css" />
+  </head>
+  <body>
+    <!-- Import MDL-Lite Javascript from RawGit -->
+    <script src="//cdn.rawgit.com/mailtoharshit/Feather/master/js/material.min.js"></script>
+  </body>
+</apex:page>
