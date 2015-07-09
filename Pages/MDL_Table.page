@@ -1,0 +1,128 @@
+<apex:page showheader="false" sidebar="false" standardStylesheets="false">
+   <html>
+    <head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Import CSS from Rawgit` -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/mailtoharshit/Feather/master/css/material.indigo-pink.min.css" />
+    <!-- Import Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Import MDL-Lite Javascript from RawGit -->
+    <script src="//cdn.rawgit.com/mailtoharshit/Feather/master/js/material.min.js"></script>
+    <style>
+     .pre-loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -32px; /* -1 * image width / 2 */
+        margin-top: -32px; /* -1 * image height / 2 */
+        display: none;
+      }
+     </style>
+    <!-- Custom Javascript -->
+        <script> 
+          function clearList()
+          {
+              if(!$('#cList').empty())
+              {
+                  //if non-empty then clear list before every call
+                  $('#cList').empty();
+              }
+          }
+
+          var DML = function(){
+              //Instantiate a reference 
+              var data = new SObjectModel.acc();
+              //process the data received in return
+              data.retrieve({ limit: 100 } ,function(err, records){
+                  //if failure
+                  if(err) alert(err.message);
+                  else { 
+                      populate(records);       
+                  }
+              });
+              
+              //Method to Pouplate Records
+              function populate(records)
+              {
+                 $('#summaryOfResults').empty();
+                 $("#loader").show();
+                 $("#content").hide();
+                  var table = $('#summaryOfResults');
+                  var trHtml = '<thead style="background-color:#9E9E9E;"><tr><th style="text-align:center">Name</th><th style="text-align:center">Billing State</th><th style="text-align:center">Billing City</th></tr></thead>';
+                  records.forEach(function(record) {
+                      // Get Text Value
+                      var name = record.get("Name");
+                      var state = record.get("BillingState");
+                      var city = record.get("BillingCity");
+                      trHtml += '<tbody><tr style="background-color:#E8ECED"><td style="text-align:center">'+name+'</td>';
+                      trHtml += '<td style="text-align:center">'+state+'</td>';
+                      trHtml += '<td style="text-align:center">'+city+'</td></tr></tbody>';
+                  });
+                  $("#loader").show().delay(500).fadeOut();
+                  $("#content").delay(1000).fadeIn(500);
+                  //Append final html
+                  $('#summaryOfResults').append(trHtml);
+              }
+          }
+       </script>
+      </head>
+     
+      <body>
+            <!--Query Salesforce using Javascript Remote Objects-->
+               <apex:remoteObjects >
+                  <!--Name the field you like to query-->
+                  <apex:remoteObjectModel name="Account" jsShorthand="acc" fields="Id,Name,BillingState, Phone"/>
+               </apex:remoteObjects>
+
+      <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Salesforce with Material Design</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <!-- Accent-colored raised button with ripple -->
+                <button id="pullbutton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="DML()">
+                  Pull Accounts
+                </button>
+              <a class="mdl-navigation__link" href="http://www.oyecode.com">Back to Article</a>
+            </nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title"></span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="http://www.oyecode.com">Oyecode Home</a>
+            <a class="mdl-navigation__link" href="">Material Forms</a>
+          </nav>
+        </div>
+        <main class="mdl-layout__content">
+          <div id="loader" class="mdl-spinner mdl-js-spinner is-active pre-loader"></div>
+          <div id="content" class="page-content">
+          <div class="demo-grid-1 mdl-grid">
+              <!-- Your content goes here -->
+              <div class="mdl-cell--12-col">
+                  <table id="summaryOfResults" class="mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-shadow--2dp" >
+                          <thead>
+                          <tr>
+                              <th style="text-align:center">Name</th>
+                              <th style="text-align:center">Billing State</th>
+                              <th style="text-align:center">Billing City</th>
+                           </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                     </table>
+                   </div>
+               </div>
+          </div>
+        </main>
+      </div> 
+    </body>
+  </html>
+</apex:page>
