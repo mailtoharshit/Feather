@@ -1,0 +1,52 @@
+<apex:page showheader="false" sidebar="false" standardStylesheets="false">
+  <head>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Import CSS from Rawgit` -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/mailtoharshit/Feather/master/css/material.indigo-pink.min.css" />
+    <!-- Import Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Import MDL-Lite Javascript from RawGit -->
+    <script src="//cdn.rawgit.com/mailtoharshit/Feather/master/js/material.min.js"></script>
+    <style>  .layout-transparent { 
+  background: url('http://2lemetry.com/wp-content/uploads/2014/09/df-logo.jpg') center / cover;
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+</style>
+  </head>
+  <body>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <div class="layout-transparent mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+      </main>
+    </div>
+  </body>
+</apex:page>
