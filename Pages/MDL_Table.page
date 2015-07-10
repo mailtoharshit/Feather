@@ -85,7 +85,7 @@
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
-            <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <nav class="mdl-navigation mdl-layout--fixed-header">
               <!-- Accent-colored raised button with ripple -->
                 <button id="pullbutton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="DML()">
                   Pull Accounts
