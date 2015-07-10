@@ -1,4 +1,5 @@
 <html>
+  <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Material Design Lite -->
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
@@ -6,7 +7,50 @@
 <!-- Material Design icon font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Always shows a header, even in smaller screens. -->
+    <style>
+      .mdl-layout__header-row {
+  padding-right: 15px;
+}
 
+.mdl-layout__header-row  .mdl-layout-spacer {
+  text-align: right;
+}
+
+.page-content button.mdl-button--fab {
+  position: fixed;
+  top: auto;
+  right: 30px;
+  bottom: 30px;
+  left: auto;
+  z-index: 9999;
+  -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.25);
+          box-shadow: 0 5px 5px rgba(0,0,0,.25);
+}
+
+.demo-card-wide.mdl-card {
+  width: 90%;
+  max-width: 512px;
+  margin: 25px auto;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-color: #fafafa;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0 -35px 25px rgba(0,0,0,.5);
+          box-shadow: inset 0 -35px 25px rgba(0,0,0,.5);
+}
+
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+    </style>
+  </head>
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header raised depth5">
