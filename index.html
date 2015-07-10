@@ -6,52 +6,10 @@
 <!-- Material Design icon font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Always shows a header, even in smaller screens. -->
-<style>
-  .mdl-layout__header-row {
-  padding-right: 15px;
-}
-
-.mdl-layout__header-row  .mdl-layout-spacer {
-  text-align: right;
-}
-
-.page-content button.mdl-button--fab {
-  position: fixed;
-  top: auto;
-  right: 30px;
-  bottom: 30px;
-  left: auto;
-  z-index: 9999;
-  -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.25);
-          box-shadow: 0 5px 5px rgba(0,0,0,.25);
-}
-
-.demo-card-wide.mdl-card {
-  width: 90%;
-  max-width: 512px;
-  margin: 25px auto;
-}
-
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background-color: #fafafa;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-box-shadow: inset 0 -35px 25px rgba(0,0,0,.5);
-          box-shadow: inset 0 -35px 25px rgba(0,0,0,.5);
-}
-
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
 
 <body>
-  
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
+    <header class="mdl-layout__header raised depth5">
       <div class="mdl-layout__header-row">
         <!-- Title -->
         <span class="mdl-layout-title">Feather : Material Design on Visualforce</span>
@@ -93,12 +51,31 @@
         <!-- Your content goes here -->
         <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
           <div class="page-content">
+             <!-- Your content goes here -->
+            <div class="mdl-card mdl-shadow--2dp demo-card-wide">
+              <div class="mdl-card__title" style="background-image: url(http://i.imgur.com/Fl7qTWK.jpg);">
+              </div>
+              <div class="mdl-card__supporting-text " > <h2 class="mdl-card__title-text" style="color:#0580c3; ">Background Image as Header</h2>
+                Background Image : Change background with an image to give a complete different look
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Open Page
+              </a>
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Grab Code 
+              </a>
+              </div>
+              <div class="mdl-card__menu">
+              </div>
+            </div>
+            
             <!-- Your content goes here -->
             <div class="mdl-card mdl-shadow--2dp demo-card-wide">
               <div class="mdl-card__title" style="background-image: url(http://i.imgur.com/GpvXFoz.png);">
-                <h2 class="mdl-card__title-text">Visualforce Scrollable Header</h2>
               </div>
               <div class="mdl-card__supporting-text">
+                <h2 class="mdl-card__title-text" style="color:#0580c3; ">Visualforce Scrollable Header</h2>
                 Scrollablee Header : Header changes as screen shrinks to small size (specially for mobile and other devices)
               </div>
               <div class="mdl-card__actions mdl-card--border">
@@ -115,9 +92,9 @@
 
             <div class="mdl-card mdl-shadow--2dp demo-card-wide">
               <div class="mdl-card__title" style="background-image: url(http://i.imgur.com/u9Mloi9.png);">
-                <h2 class="mdl-card__title-text">Visualforce Search and Sidebar</h2>
               </div>
               <div class="mdl-card__supporting-text">
+                 <h2 class="mdl-card__title-text" style="color:#0580c3;">Visualforce Search and Sidebar</h2>
                 Search Bar : Template with Sidebar and Search box on top
               </div>
               <div class="mdl-card__actions mdl-card--border">
@@ -134,9 +111,9 @@
 
             <div class="mdl-card mdl-shadow--2dp demo-card-wide">
               <div class="mdl-card__title" style="background-image: url(http://i.imgur.com/R65x6XH.png);">
-                <h2 class="mdl-card__title-text" style="color :black">Scrollable Tabs </h2>
               </div>
               <div class="mdl-card__supporting-text">
+                 <h2 class="mdl-card__title-text" style="color:#0580c3;">Scrollable Tabs </h2>
                 As you shrink page size, window border roll over the tabs
               </div>
               <div class="mdl-card__actions mdl-card--border">
@@ -154,9 +131,9 @@
             <!-- Your content goes here -->
             <div class="mdl-card mdl-shadow--2dp demo-card-wide">
               <div class="mdl-card__title" style="background-image: url(http://i.imgur.com/GpvXFoz.png);">
-                <h2 class="mdl-card__title-text">Fixed Tabs </h2>
               </div>
               <div class="mdl-card__supporting-text">
+                <h2 class="mdl-card__title-text" style="color:#0580c3;">Fixed Tabs </h2>
                 Fixed Tabs Header : Change and resize as screen shrinks
               </div>
               <div class="mdl-card__actions mdl-card--border">
@@ -170,27 +147,7 @@
               <div class="mdl-card__menu">
               </div>
             </div>
-            <!-- Your content goes here -->
-            <div class="mdl-card mdl-shadow--2dp demo-card-wide">
-              <div class="mdl-card__title" style="background-image: url(http://i.imgur.com/Fl7qTWK.jpg);">
-                <h2 class="mdl-card__title-text">Background Image as Header</h2>
-              </div>
-              <div class="mdl-card__supporting-text">
-                Background Image : Change background with an image to give a complete different look
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Open Page
-              </a>
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Grab Code 
-              </a>
-              </div>
-              <div class="mdl-card__menu">
-              </div>
-            </div>
-
-          </div>
+           </div>
         </section>
         <section class="mdl-layout__tab-panel" id="scroll-tab-2">
           <div class="page-content">
