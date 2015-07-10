@@ -1,7 +1,7 @@
-# Feather
-Feather : Library to showcase, usage of Google MDL on Salesforce http://mailtoharshit.github.io/Feather/
+# [Feather!](http://mailtoharshit.github.io/Feather/)
+Feather : Library to showcase, usage of Google MDL on Salesforce 
 
-Read full article at http://www.oyecode.com/2015/07/google-mdl-using-material-design-with.html
+Read full article at ### [Oyecode!](http://www.oyecode.com/2015/07/google-mdl-using-material-design-with.html)
 
 ![ScreenShot](http://a1.files.theultralinx.com/image/upload/MTI5MDI2MDI4NDQxMDM4ODE4.gif)
 #Learn Features of Material Design
