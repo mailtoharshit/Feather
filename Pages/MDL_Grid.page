@@ -1,0 +1,62 @@
+<apex:page showheader="false" sidebar="false" standardStylesheets="false">
+   <html>
+  <head>
+    <!-- Material Design Lite -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css" />
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+      body {
+  background: #fafafa;
+}
+
+.mdl-grid {
+  padding: 0!important;
+}
+
+.mdl-cell {
+  background: #3F51B5;
+  padding: 30px 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+.demo-grid-1 .mdl-cell{
+  background: #FF4081;
+}
+</style>
+  </head>
+  <body>
+    <div class="demo-grid-ruler mdl-grid">
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+      <div class="mdl-cell mdl-cell--1-col">1</div>
+    </div>
+    <div class="demo-grid-1 mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col">4</div>
+      <div class="mdl-cell mdl-cell--4-col">4</div>
+      <div class="mdl-cell mdl-cell--4-col">4</div>
+    </div>
+    <div class="demo-grid-2 mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col">6</div>
+      <div class="mdl-cell mdl-cell--4-col">4</div>
+      <div class="mdl-cell mdl-cell--2-col">2</div>
+    </div>
+    <div class="demo-grid-3 mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">6 (8 tablet)</div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">4 (6 tablet)</div>
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">2 (4 phone)</div>
+    </div>
+  </body>
+</html>
+</apex:page>
