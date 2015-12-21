@@ -101,6 +101,7 @@
     background-color: #333;
     height: 100%;
     width: 6px;
+    margin-right: 4px;
     display: inline-block;
     -webkit-animation: force-waveStretchDelay 1.2s infinite ease-in-out;
             animation: force-waveStretchDelay 1.2s infinite ease-in-out; }
